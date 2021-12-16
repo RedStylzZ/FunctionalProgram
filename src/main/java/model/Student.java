@@ -2,10 +2,10 @@ package model;
 
 public class Student {
 
-    private int id;
-    private String name;
-    private int postalCode;
-    private int age;
+    private final int id;
+    private final String name;
+    private final int postalCode;
+    private final int age;
 
     public Student(int id, String name, int postalCode, int age) {
         this.id = id;
@@ -14,28 +14,13 @@ public class Student {
         this.age = age;
     }
 
-    public int getId() {
-        return id;
-    }
-    public void setId(int id) {
-        this.id = id;
-    }
-    public String getName() {
-        return name;
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
-    public int getPostalCode() {
-        return postalCode;
-    }
-    public void setPostalCode(int postalCode) {
-        this.postalCode = postalCode;
-    }
-    public int getAge() {
-        return age;
-    }
-    public void setAge(int age) {
-        this.age = age;
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", postalCode=" + postalCode +
+                ", age=" + age +
+                '}';
     }
 }
